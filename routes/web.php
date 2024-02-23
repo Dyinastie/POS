@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*================================================================================*/
+/* SOAL PRAKTIKUM POINT OF SALES */
+/*================================================================================*/
+
+Route::get('/', [HomeController::class, 'home']);
