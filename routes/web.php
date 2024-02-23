@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SalesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,7 @@ Route::prefix('products')->group(function () {
 /*Halaman User*/
 
 Route::get('/user/{id}/name/{name}', [UserController::class, 'show']);
+
+/*Halaman Penjualan*/
+
+Route::get('/sales', [SalesController::class, 'index']);
